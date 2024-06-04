@@ -1,0 +1,2 @@
+- Download dataset from [https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset]
+- Extract it in `data` folder
