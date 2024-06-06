@@ -1,5 +1,6 @@
 from configs import config
 import tensorflow as tf
+import os
 
 """
     It then uses tf.keras.preprocessing.image_dataset_from_directory to load 
@@ -56,3 +57,9 @@ def augmentation():
 		]
 	)
 	return data_aug
+
+"""
+	cleaning up the uploads folder
+"""
+def clean_uploads_folder(filepath):
+    os.remove(filepath)

@@ -68,7 +68,7 @@ import cv2
     plt.savefig(config.TEST_PREDICTION_OUTPUT) 
 """
 img = tf.keras.utils.load_img(
-    'uploads\\1001.jpg', target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE)
+    'uploads\\0001.jpg', target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE)
 )
 
 model = tf.keras.models.load_model(config.TRAINED_MODEL_PATH)
@@ -92,9 +92,10 @@ train_ds_wo_shuffle = prepare_batch_dataset(
 # fetch class names
 class_names = train_ds_wo_shuffle.class_names
 
-print(class_names)
-
+# print(class_names)    
+vegetable_name = class_names[np.argmax(score)]
+vegetable_name_accuracy = 100 * np.max(score)
 print(
     "This image most likely belongs to {} with a {:.2f} percent confidence."
-    .format(class_names[np.argmax(score)], 100 * np.max(score))
+    .format(vegetable_name, vegetable_name_accuracy)
 )
