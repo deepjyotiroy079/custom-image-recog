@@ -6,6 +6,7 @@ TRAIN_DATA_PATH = os.path.join(BASE_DATASET_PATH, "train")
 VALID_DATA_PATH = os.path.join(BASE_DATASET_PATH, "validation")
 TEST_DATA_PATH = os.path.join(BASE_DATASET_PATH, "test")
 OUTPUT_PATH = "output"
+WEB_UPLOADS = "uploads"
 
 # define the image size and the batch size of the dataset
 IMAGE_SIZE = 224
